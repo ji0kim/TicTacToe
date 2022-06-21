@@ -9,9 +9,26 @@ namespace TicTacToe
 {
     public class Play
     {
-      
+        private const string empty = " ";
+
         public bool Turn { get; set; } = false;
         public bool changeTurn( ) => Turn == false ? true : false;
+        public List<string> Land { get; set; }  
+        
+        public void DrawBoard(List<string> field)
+        {
+            Console.WriteLine("       |       |     ");
+            Console.WriteLine($"   {field[0]}   |   {field[1]}   |   {field[2]} ");
+            Console.WriteLine("       |       |    ");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("       |       |     ");
+            Console.WriteLine($"   {field[3]}   |   {field[4]}   |   {field[5]} ");
+            Console.WriteLine("       |       |    ");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("       |       |     ");
+            Console.WriteLine($"   {field[6]}   |   {field[7]}   |   {field[8]} ");
+            Console.WriteLine("       |       |    ");
+        }
     } 
 }
 
